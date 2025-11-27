@@ -1,0 +1,16 @@
+name: Build and Test
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Check HTML File Exists
+      run: |
+        if [ -f index.html ]; then
+          echo "Build Success: index.html found."
+        else
+          exit 1
+        fi
