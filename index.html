@@ -34,7 +34,18 @@
     </div>
 
     <script>
-        // JAVASCRIPT WILL BE ADDED IN COMMIT 3
+        // --- ADDED IN COMMIT 3 ---
+        function saveProfile() {
+            const name = document.getElementById('fullName').value;
+            const email = document.getElementById('email').value;
+            
+            if(name && email) {
+                document.getElementById('profile-msg').classList.remove('hidden');
+                setTimeout(() => document.getElementById('profile-msg').classList.add('hidden'), 3000);
+            } else {
+                alert("Please enter both name and email.");
+            }
+        }
     </script>
 </body>
 </html>
